@@ -1,53 +1,47 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "react", "prettier", "react-hooks"],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "comma-dangle": ["error", "only-multiline"],
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
   "settings": {
     "react": {
-      "version": "latest"
+      "pragma": "React",
+      "version": "detect"
     }
   },
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "prettier",
-    "plugin:prettier/recommended"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "bracketSpacing": true,
-        "jsxBracketSameLine": false,
-        "printWidth": 100,
-        "semi": true,
-        "singleQuote": true,
-        "tabWidth": 2,
-        "trailingComma": "es5",
-        "useTabs": true,
-        "overrides": [
-          {
-            "files": "{.prettierrc,.watchmanconfig,.ember-cli}",
-            "options": { "parser": "json" }
-          }
-        ]
-      }
-    ]
-  }
+  "root": true
 }
