@@ -1,0 +1,91 @@
+.card {
+  position: relative;
+  padding: 17px 60px 0 47px;
+  font-size: 16px;
+  background-color: var(--card--bg);
+  color: var(--text-color);
+  width: 320px;
+  height: 480px;
+  border: 4px solid var(--blue);
+  border-radius: 12px;
+  overflow: hidden;
+  clip-path: polygon(0% 42px, 42px 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0 100%);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 125px;
+  background: transparent;
+  transform: rotate(45deg) translate(-100%);
+  border: 4px solid var(--blue);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 368px;
+  height: 360px;
+  top: 206px;
+  left: -3px;
+  background: url("./../../assets/images/cat.png") no-repeat;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.title {
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.product {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.description {
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--subtitle-color);
+}
+
+.question {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: var(--white);
+}
+
+.link {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--blue);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.point {
+  color: var(--blue);
+}
