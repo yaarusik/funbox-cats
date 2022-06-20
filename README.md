@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+1. Различия между хорошей вёрсткой и плохой с точки зрения:
+а) пользователя — непонятный и неудобный интерфейс‚ долгая загрузка сайта.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+6) менеджера проекта — не проработанная архитектура, отсутствует идея приложения,
+верстка должна соответствовать ТЗ.
 
-## Available Scripts
+в) дизайнера — непродуманные размеры и расположения объектов на странице, слишком
+много разных шрифтов, неуместная анимация, цветовая гамма режет глаза. |
 
-In the project directory, you can run:
+г) верстальщика — верстка по методологии БЭМ, кроссбраузерность, адаптивность
 
-### `npm start`
+д) клиентского программиста — чем проще код, тем лучше; сайт оптимизирован,
+отсутствуют костыли, используются паттерны проектирования, используется фреймворк
+для более высокой производительности работы.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+е) серверного программиста — обеспечение корректной работы всех функций сайта,
+удобный АРТ, разработка понятной логики приложения, поддерживается сетевая
+безопасность, логи ошибок в доступном для пользователя формате.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    
+2. Основные особенности верстки крупных многостраничных сайтов, дизайн
+которых может меняться в процессе реализации и поддержки. 
+  
+  Использовать семантическую вёрстку. Придерживаться БЭМ. Давать осмысленные
+названия переменным. Разбивать код на модули. Следить за архитектурой проекта. Избегать
+повторения кода. Использовать компонентный подход. Использовать переменные для
+свойств стилей. Использовать сборщики проектов (Wеbраck).
 
-### `npm test`
+Для того, чтобы поддерживать единый стиль написания кода использовать: ESlint и prettier.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+В своих проектах использовал следующие методологии: DRY, KISS, YAGNI. Следовал
+принципам ООП(наследование, инкапсуляция и полиморфизм).
+Использовал препроцессор Sass для стилизации проекта. А так же вышеперечисленные
+методы и технологии.
 
-### `npm run build`
+В качестве примера предоставляю проект, в котором разрабатывал игру в команде, где
+использовался следующий стэк технологий: TypeScript, Node.js, Express, Canvas, SASS, MongoDB, HTML, Webpack.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Клон игры Веселая ферма 2 - https://farm-frenzy.herokuapp.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Основные особенности адаптивной или резиновой вёрстки приложений.
+ Использование: 
+  - относительных единиц измерений em, rem, %;
+  - медиазапросов;
+  - calc в css;
+  - display: flex или grid;
+  - атрибута srcset в теге img или контейнера для картинок (тег picture) Для работы с отзывчивыми картинками для разных разрешений экрана;
+  - autoprefixer для вставки браузерных префиксов;
+  - использование @supports для определения, поддерживаются ли стили в определенном браузере;
+  - использование подхода Progressive enhancement.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+В качестве примера предоставляю проект Museum, где я верстал и разрабатывал одностраничный сайт, применяя вышеописанные технологии.
+Используемый стек технологий: JavaScript, Sass, HTML, Slick Slider, Swiper Slider
 
-### `npm run eject`
+Museum - https://yaarusik.github.io/museum/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Инструменты помогающие мне экономить время в процессе
+написания, проверки и отладки кода. 
+ - vs code;
+ - сборщик проектов webpack;
+ - доска trello или github projects для отслеживания прогресса написания кода и работы в команде;
+ - eslint и prettier;
+ - консоль разработчика в браузере;
+ - pixel perfect для вёрстки;
+ - если исользуется React, то расширение для chrome React developer tools;
+ - typescript для написания более понятного и читаемого кода. А также для более выраженной архитектуры.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Дизайнер отдал вам макет, в котором не показано, как должны выглядеть
+интерактивные элементы при наведении мыши. Ваши действия?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Свяжусь с дизайнером и уточню, почему нет стилей для интерактивных элементов и попрошу доделать макет.
+А также посмотрю, указаны ли эти требования в ТЗ.
+Если же заказчик не указывал это в требованиях. То добавлю от себя базовый интерактив, опираясь на дизайн и цветовую гамму макета.
 
-## Learn More
+7.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+8.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
