@@ -1,0 +1,33 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: local("Exo"), url(./assets/fonts/Exo2.0-Thin.otf) format("truetype");
+}
+
+body {
+  background: url("./assets/images/background.png");
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --card--bg: #f2f2f2;
+  --text-color: #000000;
+  --subtitle-color: #666666;
+  --blue: #1698d9;
+  --white: #ffffff;
+  --hover: #e52e7a;
+  --disable: rgba(179, 179, 179, 0.5);
+}
