@@ -28,4 +28,6 @@ a:active {
   --subtitle-color: #666666;
   --blue: #1698d9;
   --white: #ffffff;
+  --hover: #e52e7a;
+  --disable: rgba(179, 179, 179, 0.5);
 }

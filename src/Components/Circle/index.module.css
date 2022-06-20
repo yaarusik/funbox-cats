@@ -18,7 +18,15 @@
   padding-top: 12px;
 }
 
+.circle__active {
+  background-color: var(--hover);
+}
+
 .format {
   font-size: 21px;
   padding-top: 6px;
+}
+
+.circle__disable {
+  background-color: var(--disable);
 }
