@@ -55,7 +55,7 @@ const Card = ({ portion, taste, present, count, fullDescription, isDisable }: IC
     <div className={question}>
       Чего сидишь? Порадуй котэ,{' '}
       <a className={link} onClick={chooseLink} href="#">
-        купи.
+        купи
       </a>
       <span className={point}>.</span>
     </div>
